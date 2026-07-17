@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,19 +17,19 @@
     <!-- ================= SIDEBAR (desktop / lg and up) ================= -->
     <aside class="hidden lg:block fixed left-0 top-0 h-screen w-16 hover:w-64 bg-slate-900 border-r border-slate-800 transition-all duration-300 overflow-hidden z-50">
         <nav class="mt-8 space-y-2">
-            <a href="#" class="flex items-center gap-4 px-5 py-3 hover:bg-slate-800 rounded-lg group">
+            <a href="#dashboard" data-nav-target="dashboard" class="nav-link flex items-center gap-4 px-5 py-3 hover:bg-slate-800 rounded-lg group">
                 <span class="text-xl shrink-0">📊</span>
                 <span class="opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Dashboard</span>
             </a>
-            <a href="#" class="flex items-center gap-4 px-5 py-3 hover:bg-slate-800 rounded-lg group">
+            <a href="#products" data-nav-target="products" class="nav-link flex items-center gap-4 px-5 py-3 hover:bg-slate-800 rounded-lg group">
                 <span class="text-xl shrink-0">📦</span>
                 <span class="opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Products</span>
             </a>
-            <a href="#" class="flex items-center gap-4 px-5 py-3 hover:bg-slate-800 rounded-lg group">
+            <a href="#platforms" data-nav-target="platforms" class="nav-link flex items-center gap-4 px-5 py-3 hover:bg-slate-800 rounded-lg group">
                 <span class="text-xl shrink-0">📱</span>
                 <span class="opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Platforms</span>
             </a>
-            <a href="#" class="flex items-center gap-4 px-5 py-3 hover:bg-slate-800 rounded-lg group">
+            <a href="#campaigns" data-nav-target="campaigns" class="nav-link flex items-center gap-4 px-5 py-3 hover:bg-slate-800 rounded-lg group">
                 <span class="text-xl shrink-0">📢</span>
                 <span class="opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">Campaigns</span>
             </a>
@@ -38,19 +38,19 @@
 
     <!-- ================= BOTTOM NAV (mobile / tablet, below lg) ================= -->
     <nav class="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-slate-900 border-t border-slate-800 flex justify-around items-center py-2">
-        <a href="#" class="flex flex-col items-center gap-0.5 px-3 py-1 text-slate-300 hover:text-white">
+        <a href="#dashboard" data-nav-target="dashboard" class="nav-link flex flex-col items-center gap-0.5 px-3 py-1 text-slate-300 hover:text-white">
             <span class="text-lg">📊</span>
             <span class="text-[10px] sm:text-xs">Dashboard</span>
         </a>
-        <a href="#" class="flex flex-col items-center gap-0.5 px-3 py-1 text-slate-300 hover:text-white">
+        <a href="#products" data-nav-target="products" class="nav-link flex flex-col items-center gap-0.5 px-3 py-1 text-slate-300 hover:text-white">
             <span class="text-lg">📦</span>
             <span class="text-[10px] sm:text-xs">Products</span>
         </a>
-        <a href="#" class="flex flex-col items-center gap-0.5 px-3 py-1 text-slate-300 hover:text-white">
+        <a href="#platforms" data-nav-target="platforms" class="nav-link flex flex-col items-center gap-0.5 px-3 py-1 text-slate-300 hover:text-white">
             <span class="text-lg">📱</span>
             <span class="text-[10px] sm:text-xs">Platforms</span>
         </a>
-        <a href="#" class="flex flex-col items-center gap-0.5 px-3 py-1 text-slate-300 hover:text-white">
+        <a href="#campaigns" data-nav-target="campaigns" class="nav-link flex flex-col items-center gap-0.5 px-3 py-1 text-slate-300 hover:text-white">
             <span class="text-lg">📢</span>
             <span class="text-[10px] sm:text-xs">Campaigns</span>
         </a>
@@ -83,7 +83,7 @@
         <main class="max-w-7xl mx-auto px-4 py-6 sm:px-6 sm:py-8 md:px-8 md:py-10">
 
             <!-- KPI SECTION -->
-            <section>
+            <section id="dashboard" class="scroll-mt-8">
                 <h2 class="text-lg sm:text-xl md:text-2xl font-bold mb-4 sm:mb-6">
                     Key Performance Indicators
                 </h2>
@@ -165,7 +165,7 @@
             </section>
 
             <!-- PLATFORM PERFORMANCE -->
-            <section class="mt-8 md:mt-12">
+            <section id="platforms" class="mt-8 md:mt-12 scroll-mt-8">
                 <div class="grid gap-6 lg:grid-cols-2">
 
                     <div class="bg-slate-900 rounded-xl border border-slate-800 p-4 sm:p-6">
@@ -253,7 +253,7 @@
             </section>
 
             <!-- PRODUCTS TABLE -->
-            <section class="mt-8 md:mt-12">
+            <section id="products" class="mt-8 md:mt-12 scroll-mt-8">
                 <div class="bg-slate-900 rounded-xl border border-slate-800 p-4 sm:p-6">
                     <h2 class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Product Performance</h2>
                     <div class="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
@@ -338,7 +338,7 @@
                     </div>
                 </div>
 
-                <div class="bg-slate-900 rounded-xl border border-slate-800 p-4 sm:p-6">
+                <div id="campaigns" class="bg-slate-900 rounded-xl border border-slate-800 p-4 sm:p-6 scroll-mt-8">
                     <h2 class="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Campaign Performance</h2>
                     <div class="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
                         <table class="w-full min-w-[460px] text-left text-sm md:text-base">
@@ -485,6 +485,26 @@ new Chart(document.getElementById("conversionChart"), {
         maintainAspectRatio: false
     }
 });
+
+// Active nav highlight on scroll
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = Array.from(navLinks).map(l => document.getElementById(l.dataset.navTarget)).filter(Boolean);
+
+function setActive(id) {
+    navLinks.forEach(l => {
+        const isActive = l.dataset.navTarget === id;
+        l.classList.toggle('bg-slate-800', isActive);
+        l.classList.toggle('text-emerald-400', isActive);
+    });
+}
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) setActive(entry.target.id);
+    });
+}, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+
+sections.forEach(s => observer.observe(s));
 </script>
 </body>
 </html>
